@@ -7,7 +7,7 @@ import {
 	SidebarMenuButton,
 	SidebarMenuItem,
 } from "@/shared/components/ui/sidebar"
-import { ChartArea, Phone, UsersRound, Workflow } from "lucide-react"
+import { AudioLines, ChartArea, Phone, UsersRound } from "lucide-react"
 import React from "react"
 import { Link } from "react-router-dom"
 import {
@@ -21,18 +21,21 @@ import { Separator } from "./ui/separator"
 
 export const SideBar: React.FC = () => {
 	return (
-		<Sidebar collapsible="icon" className="shadow-xl sticky top-0">
-			<SidebarHeader className="py-3 my-5" />
-			<SidebarContent className="p-6 gap-8">
-				<h4 className="flex items-center gap-2 text-xl font-bold text-purple-800">
-					<Workflow size={18} />
-					TeamHub
+		<Sidebar
+			collapsible="icon"
+			className="border row-span-2 w-full sticky top-0 border-red-800"
+		>
+			<SidebarHeader className="py-3 my-5">awd</SidebarHeader>
+			<SidebarContent className="p-6 gap-8 w-full ">
+				<h4 className="flex items-center gap-2 text-xl font-bold">
+					<AudioLines />
+					Hub Spot
 				</h4>
 				<Separator className="opacity-50" />
 
 				<SidebarMenu className="flex flex-col gap-2">
 					<Link to="/">
-						<Item variant="outline">
+						<Item variant="muted">
 							<ItemMedia variant="icon">
 								<UsersRound size={20} />
 							</ItemMedia>
@@ -45,7 +48,7 @@ export const SideBar: React.FC = () => {
 						</Item>
 					</Link>
 					<Link to="#">
-						<Item variant="outline">
+						<Item variant="muted">
 							<ItemMedia variant="icon">
 								<ChartArea size={20} />
 							</ItemMedia>
@@ -58,7 +61,7 @@ export const SideBar: React.FC = () => {
 						</Item>
 					</Link>
 					<Link to="#">
-						<Item variant="outline">
+						<Item variant="muted">
 							<ItemMedia variant="icon">
 								<Phone size={20} />
 							</ItemMedia>

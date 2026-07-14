@@ -1,30 +1,16 @@
-import { Loader } from "@/shared/components/Loader"
-import { Badge } from "@/shared/components/ui/badge"
-import { Button } from "@/shared/components/ui/button"
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-} from "@/shared/components/ui/card"
-import { UserRound as UserIcon } from "lucide-react"
 import React from "react"
-import { userApi } from "../api/user.api"
-import { User } from "../model/types"
 
 export const UserCard: React.FC = () => {
-	const [users, setUsers] = React.useState<User[] | null>()
+	// const [users, setUsers] = React.useState<User[] | null>()
 
-	React.useEffect(() => {
-		const getUsers = async () => {
-			const users = await userApi.getUsers()
-			console.log(users)
-			setUsers(users.data?.users)
-		}
-		getUsers()
-	}, [])
+	// React.useEffect(() => {
+	// 	const getUsers = async () => {
+	// 		const users = await userApi.getUsers()
+	// 		console.log(users)
+	// 		setUsers(users.data?.users)
+	// 	}
+	// 	getUsers()
+	// }, [])
 
 	return (
 		<div
@@ -35,7 +21,8 @@ export const UserCard: React.FC = () => {
         2xl:grid-cols-5 3xl:grid-cols-6
       "
 		>
-			{!users ? (
+			awd
+			{/* {!users ? (
 				<Loader />
 			) : (
 				users.map((user) => (
@@ -64,7 +51,7 @@ export const UserCard: React.FC = () => {
 						</CardFooter>
 					</Card>
 				))
-			)}
+			)} */}
 		</div>
 	)
 }
