@@ -1,32 +1,26 @@
 import { Moon, Sun, UserRound } from "lucide-react"
 import React from "react"
 import { useTheme } from "../hooks/use-theme"
-import { MenuBar } from "./Menubar"
 import { Button } from "./ui/button"
+import { SidebarTrigger } from "./ui/sidebar"
 
 export const SearchBar: React.FC = () => {
 	const { setTheme, theme } = useTheme()
 	return (
-		<header className="sticky top-0 bg-searchbar">
-			<div
-				className="flex flex-col-reverse items-start gap-3
-				tablet:flex-row
-			"
-			>
-				<div className="flex gap-2 items-center">
+		<header className="sticky top-0 bg-searchbar py-4 w-full">
+			<div className="flex justify-between items-start gap-3 px-2">
+				<SidebarTrigger />
+				<div className="flex items-center gap-1.5">
+					<Button variant="link">
+						<small>User name</small>
+						<UserRound />
+					</Button>
 					<Button
-						variant={"ghost"}
+						className="hidden"
 						onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+						variant="outline"
 					>
 						{theme === "dark" ? <Sun /> : <Moon />}
-					</Button>
-					<MenuBar />
-				</div>
-				<div className="flex items-center gap-1.5">
-					<span>Company name</span>
-					<Button>
-						<UserRound />
-						<small>User name</small>
 					</Button>
 				</div>
 			</div>

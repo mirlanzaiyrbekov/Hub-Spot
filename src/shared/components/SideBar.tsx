@@ -1,4 +1,6 @@
 import {
+	ChangeTheme,
+	Separator,
 	Sidebar,
 	SidebarContent,
 	SidebarFooter,
@@ -6,7 +8,8 @@ import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
-} from "@/shared/components/ui/sidebar"
+} from "@/shared/components"
+
 import { AudioLines, ChartArea, Phone, UsersRound } from "lucide-react"
 import React from "react"
 import { Link } from "react-router-dom"
@@ -17,15 +20,14 @@ import {
 	ItemMedia,
 	ItemTitle,
 } from "./ui/item"
-import { Separator } from "./ui/separator"
 
 export const SideBar: React.FC = () => {
 	return (
-		<Sidebar
-			collapsible="icon"
-			className="border row-span-2 w-full sticky top-0 border-red-800"
-		>
-			<SidebarHeader className="py-3 my-5">awd</SidebarHeader>
+		<Sidebar collapsible="icon" className="border w-full sticky top-0">
+			<SidebarHeader className="py-3 my-5">
+				<span className="text-xs">Салон красоты ESTEL:</span>
+				<ChangeTheme />
+			</SidebarHeader>
 			<SidebarContent className="p-6 gap-8 w-full ">
 				<h4 className="flex items-center gap-2 text-xl font-bold">
 					<AudioLines />

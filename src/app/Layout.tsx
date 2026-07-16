@@ -9,14 +9,12 @@ export const Layout: React.FC = () => {
 	return (
 		<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
 			<SidebarProvider>
-				<div className="grid w-full min-h-screen grid-cols-[280px_minmax(0,1fr)]">
-					<SideBar />
-					<main className="overflow-y-auto border-red-600 h-screen">
-						<SearchBar />
-						<Outlet />
-						<section className="border border-red-300 h-screen"></section>
-					</main>
-				</div>
+				<SideBar />
+				<main className="overflow-y-auto border-red-600 h-screen w-full">
+					<SearchBar />
+					<Outlet />
+					<section className="border border-red-300 h-screen"></section>
+				</main>
 			</SidebarProvider>
 		</ThemeProvider>
 	)
