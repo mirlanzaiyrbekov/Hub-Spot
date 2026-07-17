@@ -1,1 +1,1 @@
-export * from "./users/ui/Users.card"
+export * from "./users/ui/UsersList"

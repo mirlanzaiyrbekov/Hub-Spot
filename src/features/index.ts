@@ -1,1 +1,1 @@
-export * from "./theme/ui/ChangeTheme"
+export * from "./change-theme/ui/ChangeTheme"

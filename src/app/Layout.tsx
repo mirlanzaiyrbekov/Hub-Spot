@@ -1,10 +1,10 @@
-import { ThemeProvider } from "@/app/providers/theme-provider"
-import { SidebarProvider } from "@/shared/ui/sidebar"
+import { ThemeProvider } from "@/app/providers"
+import { SidebarProvider } from "@/shared"
 import { AppSidebar, SearchBar } from "@/widgets"
-import React from "react"
+import { FC } from "react"
 import { Outlet } from "react-router-dom"
 
-export const Layout: React.FC = () => {
+export const Layout: FC = () => {
 	return (
 		<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
 			<SidebarProvider>

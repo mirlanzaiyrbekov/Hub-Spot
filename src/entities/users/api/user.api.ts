@@ -1,5 +1,5 @@
 import { api } from "@/shared/api/api"
-import { UserResponse } from "../model/users.types"
+import { UserResponse } from "../types/user.type"
 
 const API_ENDPOINTS = {
 	USERS: "users",
@@ -7,7 +7,7 @@ const API_ENDPOINTS = {
 	SEARCH: "users/search",
 } as const
 
-export const userApi = {
+export const usersApi = {
 	/**
 	 * @description GET ALL USERS
 	 * @param limit - количество пользователей

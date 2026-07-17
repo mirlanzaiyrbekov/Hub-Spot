@@ -1,7 +1,7 @@
+import { useTheme } from "@/app/hooks"
+import { Button } from "@/shared"
 import { Moon, Sun } from "lucide-react"
 import { FC } from "react"
-import { Button } from "../../../shared/ui/button"
-import { useTheme } from "../use-theme"
 
 export const ChangeTheme: FC = () => {
 	const { setTheme, theme } = useTheme()

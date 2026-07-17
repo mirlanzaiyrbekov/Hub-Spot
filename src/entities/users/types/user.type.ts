@@ -1,11 +1,4 @@
-export interface Root {
-	users: User[]
-	total: number
-	skip: number
-	limit: number
-}
-
-export interface User {
+export interface IUser {
 	id: number
 	firstName: string
 	lastName: string
@@ -93,5 +86,5 @@ export interface Crypto {
 }
 
 export type UserResponse = {
-	users: User[]
+	users: IUser[]
 }
