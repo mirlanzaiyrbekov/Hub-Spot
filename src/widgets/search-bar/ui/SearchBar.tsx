@@ -1,11 +1,9 @@
-import { Moon, Sun, UserRound } from "lucide-react"
-import React from "react"
-import { useTheme } from "../hooks/use-theme"
-import { Button } from "./ui/button"
-import { SidebarTrigger } from "./ui/sidebar"
+import { ChangeTheme } from "@/features"
+import { Button, SidebarTrigger } from "@/shared"
+import { UserRound } from "lucide-react"
+import { FC } from "react"
 
-export const SearchBar: React.FC = () => {
-	const { setTheme, theme } = useTheme()
+export const SearchBar: FC = () => {
 	return (
 		<header className="sticky top-0 bg-searchbar py-4 w-full">
 			<div className="flex justify-between items-start gap-3 px-2">
@@ -15,13 +13,7 @@ export const SearchBar: React.FC = () => {
 						<small>User name</small>
 						<UserRound />
 					</Button>
-					<Button
-						className="hidden"
-						onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-						variant="outline"
-					>
-						{theme === "dark" ? <Sun /> : <Moon />}
-					</Button>
+					<ChangeTheme />
 				</div>
 			</div>
 		</header>

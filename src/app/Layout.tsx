@@ -1,7 +1,6 @@
 import { ThemeProvider } from "@/app/providers/theme-provider"
-import { SearchBar } from "@/shared"
 import { SidebarProvider } from "@/shared/ui/sidebar"
-import { AppSidebar } from "@/widgets/AppSidebar"
+import { AppSidebar, SearchBar } from "@/widgets"
 import React from "react"
 import { Outlet } from "react-router-dom"
 

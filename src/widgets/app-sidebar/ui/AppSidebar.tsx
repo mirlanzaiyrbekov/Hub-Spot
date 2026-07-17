@@ -1,5 +1,10 @@
+import { ChangeTheme } from "@/features"
 import {
-	ChangeTheme,
+	Item,
+	ItemContent,
+	ItemDescription,
+	ItemMedia,
+	ItemTitle,
 	Separator,
 	Sidebar,
 	SidebarContent,
@@ -10,18 +15,11 @@ import {
 	SidebarMenuItem,
 } from "@/shared"
 
-import {
-	Item,
-	ItemContent,
-	ItemDescription,
-	ItemMedia,
-	ItemTitle,
-} from "@/shared"
 import { AudioLines, ChartArea, Phone, UsersRound } from "lucide-react"
-import React from "react"
+import { FC } from "react"
 import { Link } from "react-router-dom"
 
-export const AppSidebar: React.FC = () => {
+export const AppSidebar: FC = () => {
 	return (
 		<Sidebar collapsible="icon" className="border w-full sticky top-0">
 			<SidebarHeader className="py-3 my-5">
