@@ -1,7 +1,7 @@
 import { Moon, Sun } from "lucide-react"
 import { FC } from "react"
-import { useTheme } from "../hooks/use-theme"
-import { Button } from "./ui/button"
+import { Button } from "../../../shared/ui/button"
+import { useTheme } from "../use-theme"
 
 export const ChangeTheme: FC = () => {
 	const { setTheme, theme } = useTheme()

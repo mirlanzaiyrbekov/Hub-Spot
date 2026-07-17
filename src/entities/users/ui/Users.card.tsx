@@ -1,6 +1,6 @@
 import React from "react"
 
-export const UserCard: React.FC = () => {
+export const UsersCard: React.FC = () => {
 	// const [users, setUsers] = React.useState<User[] | null>()
 
 	// React.useEffect(() => {

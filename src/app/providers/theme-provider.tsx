@@ -2,7 +2,7 @@ import {
 	Theme,
 	ThemeProviderContext,
 	ThemeProviderProps,
-} from "@/shared/context/theme-context"
+} from "@/features/theme/theme-context"
 import { useEffect, useState } from "react"
 
 export const ThemeProvider = ({

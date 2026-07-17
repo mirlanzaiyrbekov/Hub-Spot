@@ -1,5 +1,3 @@
-export * from "./ChangeTheme"
-export * from "./SearchBar"
 export * from "./ui/alert-dialog"
 export * from "./ui/badge"
 export * from "./ui/button"
