@@ -7,7 +7,7 @@ export const ChangeTheme: FC = () => {
 	const { setTheme, theme } = useTheme()
 	return (
 		<Button
-			className="hidden"
+			className="hidden lg:block"
 			onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
 			variant="outline"
 		>

@@ -23,14 +23,19 @@ export const AppSidebar: FC = () => {
 	return (
 		<Sidebar collapsible="icon" className="border w-full sticky top-0">
 			<SidebarHeader className="py-3 my-5">
-				<span className="text-xs">Салон красоты ESTEL:</span>
-				<ChangeTheme />
-			</SidebarHeader>
-			<SidebarContent className="p-6 gap-8 w-full ">
 				<h4 className="flex items-center gap-2 text-xl font-bold">
 					<AudioLines />
 					Hub Spot
 				</h4>
+			</SidebarHeader>
+			<SidebarContent className="p-6 gap-8 w-full ">
+				<div className="flex items-center gap-3.5">
+					<ChangeTheme />
+					<div className="flex flex-col">
+						<span className="text-md">Салон красоты ESTEL:</span>
+						<small className="text-textcolor">John Doe</small>
+					</div>
+				</div>
 				<Separator className="opacity-50" />
 
 				<SidebarMenu className="flex flex-col gap-2">

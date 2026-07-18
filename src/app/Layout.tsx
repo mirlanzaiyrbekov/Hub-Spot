@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@/app/providers"
 import { SidebarProvider } from "@/shared"
-import { AppSidebar, SearchBar } from "@/widgets"
+import { AppSidebar } from "@/widgets"
 import { FC } from "react"
 import { Outlet } from "react-router-dom"
 
@@ -9,8 +9,7 @@ export const Layout: FC = () => {
 		<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
 			<SidebarProvider>
 				<AppSidebar />
-				<main className="overflow-y-auto border-red-600 h-screen w-full">
-					<SearchBar />
+				<main className="overflow-y-auto h-screen px-3">
 					<Outlet />
 					<section className="border border-red-300 h-screen"></section>
 				</main>
