@@ -14,7 +14,7 @@ export const DashboardList = () => {
 					Общая прибыль
 				</span>
 				<span className="flex items-center gap-0.5 whitespace-nowrap text-green-500">
-					<MoveUp size={14} />
+					<ChevronsUp size={14} />
 					3023.38KGS
 				</span>
 			</li>
@@ -23,7 +23,7 @@ export const DashboardList = () => {
 					Расходы
 				</span>
 				<span className="flex items-center gap-0.5 whitespace-nowrap text-red-500">
-					<MoveDown size={14} />
+					<ChevronsDown size={14} />
 					1023.02KGS
 				</span>
 			</li>
@@ -32,7 +32,7 @@ export const DashboardList = () => {
 					Лучший план
 				</span>
 				<span className="flex items-center gap-0.5 text-green-500 whitespace-nowrap">
-					<ChevronsUp size={14} />
+					<MoveUp size={14} />
 					17 John Doe
 				</span>
 			</li>
@@ -41,7 +41,7 @@ export const DashboardList = () => {
 					Худший план
 				</span>
 				<span className="flex items-center gap-0.5 text-red-500 whitespace-nowrap">
-					<ChevronsDown size={14} />4 John Doe
+					<MoveDown size={14} />4 John Doe
 				</span>
 			</li>
 			<li className="flex justify-between items-center gap-2">
@@ -67,7 +67,7 @@ export const DashboardList = () => {
 					Рейтинг компании (отзывы) 2GIS
 				</span>
 				<div className="flex items-center gap-0.5 whitespace-nowrap">
-					<small className="border p-2">4456</small>
+					<small className="border border-dashed p-2">4456</small>
 					<Star fill="var(--color-foreground)" size={16} />
 					<Star fill="var(--color-foreground)" size={16} />
 					<Star fill="var(--color-foreground)" size={16} />
