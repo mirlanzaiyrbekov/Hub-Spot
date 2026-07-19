@@ -15,7 +15,13 @@ import {
 	SidebarMenuItem,
 } from "@/shared"
 
-import { AudioLines, ChartArea, Phone, UsersRound } from "lucide-react"
+import {
+	AudioLines,
+	ChartArea,
+	LayoutDashboard,
+	Phone,
+	UsersRound,
+} from "lucide-react"
 import { FC } from "react"
 import { Link } from "react-router-dom"
 
@@ -40,6 +46,19 @@ export const AppSidebar: FC = () => {
 
 				<SidebarMenu className="flex flex-col gap-2">
 					<Link to="/">
+						<Item variant="muted">
+							<ItemMedia variant="icon">
+								<LayoutDashboard size={20} />
+							</ItemMedia>
+							<ItemContent>
+								<ItemTitle>Dashboard</ItemTitle>
+								<ItemDescription>
+									Dashboard, главная страница, основная информация
+								</ItemDescription>
+							</ItemContent>
+						</Item>
+					</Link>
+					<Link to="/users">
 						<Item variant="muted">
 							<ItemMedia variant="icon">
 								<UsersRound size={20} />
