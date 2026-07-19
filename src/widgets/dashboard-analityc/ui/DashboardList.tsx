@@ -1,4 +1,4 @@
-import { MoveDown, MoveUp, Star } from "lucide-react"
+import { ChevronsDown, ChevronsUp, MoveDown, MoveUp, Star } from "lucide-react"
 
 export const DashboardList = () => {
 	return (
@@ -31,24 +31,48 @@ export const DashboardList = () => {
 				<span className="text-[14px] flex-1 border-b border-dashed border-gray-300 dark:border-gray-600 pb-0.5">
 					Лучший план
 				</span>
-				<span className="whitespace-nowrap">John Doe</span>
+				<span className="flex items-center gap-0.5 text-green-500 whitespace-nowrap">
+					<ChevronsUp size={14} />
+					17 John Doe
+				</span>
 			</li>
 			<li className="flex justify-between items-center gap-2">
 				<span className="text-[14px] flex-1 border-b border-dashed border-gray-300 dark:border-gray-600 pb-0.5">
 					Худший план
 				</span>
-				<span className="whitespace-nowrap">John Doe</span>
+				<span className="flex items-center gap-0.5 text-red-500 whitespace-nowrap">
+					<ChevronsDown size={14} />4 John Doe
+				</span>
 			</li>
 			<li className="flex justify-between items-center gap-2">
 				<span className="text-[14px] flex-1 border-b border-dashed border-gray-300 dark:border-gray-600 pb-0.5">
-					Рейтинг (отзывы) 2GIS
+					Число сотрудников
+				</span>
+				<span className="flex items-center gap-0.5 whitespace-nowrap">18</span>
+			</li>
+			<li className="flex justify-between items-center gap-2">
+				<span className="text-[14px] flex-1 border-b border-dashed border-gray-300 dark:border-gray-600 pb-0.5">
+					Последняя оценка
 				</span>
 				<div className="flex items-center gap-0.5 whitespace-nowrap">
-					<Star fill="var(--color-foreground)" size={18} />
-					<Star fill="var(--color-foreground)" size={18} />
-					<Star fill="var(--color-foreground)" size={18} />
-					<Star size={18} />
-					<Star size={18} />
+					<Star fill="var(--color-foreground)" size={16} />
+					<Star fill="var(--color-foreground)" size={16} />
+					<Star fill="var(--color-foreground)" size={16} />
+					<Star fill="var(--color-foreground)" size={16} />
+					<Star size={16} />
+				</div>
+			</li>
+			<li className="flex justify-between items-center gap-2">
+				<span className="text-[14px] flex-1 border-b border-dashed border-gray-300 dark:border-gray-600 pb-0.5">
+					Рейтинг компании (отзывы) 2GIS
+				</span>
+				<div className="flex items-center gap-0.5 whitespace-nowrap">
+					<small className="border p-2">4456</small>
+					<Star fill="var(--color-foreground)" size={16} />
+					<Star fill="var(--color-foreground)" size={16} />
+					<Star fill="var(--color-foreground)" size={16} />
+					<Star size={16} />
+					<Star size={16} />
 				</div>
 			</li>
 		</ul>
