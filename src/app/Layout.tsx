@@ -9,9 +9,8 @@ export const Layout: FC = () => {
 		<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
 			<SidebarProvider>
 				<AppSidebar />
-				<main className="overflow-y-auto h-screen px-3">
+				<main className="overflow-y-auto h-screen px-3 w-full">
 					<Outlet />
-					<section className="border border-red-300 h-screen"></section>
 				</main>
 			</SidebarProvider>
 		</ThemeProvider>

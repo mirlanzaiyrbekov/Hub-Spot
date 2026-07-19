@@ -1,10 +1,18 @@
-import { UsersList } from "@/entities"
-import React from "react"
+import { SalesChart } from "@/features"
+import { DashboardStats } from "@/widgets"
+import { FC } from "react"
 
-export const Home: React.FC = () => {
+export const Home: FC = () => {
 	return (
-		<div className="py-10">
-			<UsersList />
-		</div>
+		<>
+			<section>
+				{/* DASHBOARD STATS */}
+				<DashboardStats />
+				{/* SALE CHART */}
+				<div className="grid grid-cols-2">
+					<SalesChart />
+				</div>
+			</section>
+		</>
 	)
 }
