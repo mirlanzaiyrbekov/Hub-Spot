@@ -1,2 +1,4 @@
 export * from "./app-sidebar/ui/AppSidebar"
 export * from "./dashboard-analityc/ui/DashboardAnalityc"
+export * from "./dashboard-cards/ui/revenue-card"
+export * from "./dashboard-cards/ui/visitors-card"
