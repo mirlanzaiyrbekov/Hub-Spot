@@ -29,12 +29,6 @@ const chartConfig = {
 export const SalesChart: FC = () => {
 	return (
 		<div className="border border-dashed p-8">
-			<h5 className="flex items-center justify-between gap-2">
-				<span className="font-bold ">Финансы компании</span>
-				<strong className="text-xs text-textcolor border border-dashed p-2 border-textcolor">
-					За последние 6 месяцев
-				</strong>
-			</h5>
 			<ChartContainer config={chartConfig} className="w-full h-full">
 				<BarChart accessibilityLayer data={chartData}>
 					<CartesianGrid vertical={false} />

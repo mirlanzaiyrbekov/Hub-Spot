@@ -158,12 +158,12 @@ export const StatChart: FC = () => {
 	return (
 		<Card className="w-full min-h-80">
 			<CardHeader>
-				<CardTitle>Total Visitors</CardTitle>
+				<CardTitle>Посещения салона</CardTitle>
 				<CardDescription>
 					<span className="hidden @[540px]/card:block">
-						Total for the last 3 months
+						Общее за последние 3 месяца
 					</span>
-					<span className="@[540px]/card:hidden">Last 3 months</span>
+					<span className="@[540px]/card:hidden">Последние 3 месяца</span>
 				</CardDescription>
 				<CardAction>
 					<ToggleGroup
@@ -173,27 +173,27 @@ export const StatChart: FC = () => {
 						variant="outline"
 						className="hidden *:data-[slot=toggle-group-item]:px-4! @[767px]/card:flex"
 					>
-						<ToggleGroupItem value="90d">Last 3 months</ToggleGroupItem>
-						<ToggleGroupItem value="30d">Last 30 days</ToggleGroupItem>
-						<ToggleGroupItem value="7d">Last 7 days</ToggleGroupItem>
+						<ToggleGroupItem value="90d">Последние 3 месяца</ToggleGroupItem>
+						<ToggleGroupItem value="30d">Последние 30 дней</ToggleGroupItem>
+						<ToggleGroupItem value="7d">Последние 7 дней</ToggleGroupItem>
 					</ToggleGroup>
 					<Select value={timeRange} onValueChange={setTimeRange}>
 						<SelectTrigger
-							className="flex w-40 **:data-[slot=select-value]:block **:data-[slot=select-value]:truncate @[767px]/card:hidden"
+							className="flex **:data-[slot=select-value]:block **:data-[slot=select-value]:truncate @[767px]/card:hidden"
 							size="sm"
-							aria-label="Select a value"
+							aria-label="Выбрать значение"
 						>
-							<SelectValue placeholder="Last 3 months" />
+							<SelectValue placeholder="Последние 3 месяца" />
 						</SelectTrigger>
 						<SelectContent className="rounded-xl">
 							<SelectItem value="90d" className="rounded-lg">
-								Last 3 months
+								Последние 3 месяца
 							</SelectItem>
 							<SelectItem value="30d" className="rounded-lg">
-								Last 30 days
+								Последние 30 дней
 							</SelectItem>
 							<SelectItem value="7d" className="rounded-lg">
-								Last 7 days
+								Последние 7 дней
 							</SelectItem>
 						</SelectContent>
 					</Select>
@@ -240,7 +240,7 @@ export const StatChart: FC = () => {
 							minTickGap={32}
 							tickFormatter={(value) => {
 								const date = new Date(value)
-								return date.toLocaleDateString("en-US", {
+								return date.toLocaleDateString("ru-RU", {
 									month: "short",
 									day: "numeric",
 								})
@@ -251,7 +251,7 @@ export const StatChart: FC = () => {
 							content={
 								<ChartTooltipContent
 									labelFormatter={(value) => {
-										return new Date(value).toLocaleDateString("en-US", {
+										return new Date(value).toLocaleDateString("ru-RU", {
 											month: "short",
 											day: "numeric",
 										})
