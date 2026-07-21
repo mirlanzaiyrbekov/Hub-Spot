@@ -18,7 +18,6 @@ import {
 } from "@/shared/ui/sheet"
 import { Skeleton } from "@/shared/ui/skeleton"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/shared/ui/tooltip"
-import { Menu } from "lucide-react"
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -249,6 +248,7 @@ function Sidebar({
 function SidebarTrigger({
 	className,
 	onClick,
+	children,
 	...props
 }: React.ComponentProps<typeof Button>) {
 	const { toggleSidebar } = useSidebar()
@@ -258,7 +258,6 @@ function SidebarTrigger({
 			data-sidebar="trigger"
 			data-slot="sidebar-trigger"
 			variant="ghost"
-			size="icon-sm"
 			className={cn(className)}
 			onClick={(event) => {
 				onClick?.(event)
@@ -266,7 +265,7 @@ function SidebarTrigger({
 			}}
 			{...props}
 		>
-			<Menu />
+			{children}
 			<span className="sr-only">Toggle Sidebar</span>
 		</Button>
 	)

@@ -1,115 +1,186 @@
-import { ChangeTheme } from "@/features"
+"use client"
+
 import {
-	Item,
-	ItemContent,
-	ItemDescription,
-	ItemMedia,
-	ItemTitle,
-	Separator,
+	AudioLines,
+	AudioWaveform,
+	BookOpen,
+	Bot,
+	Command,
+	Frame,
+	GalleryVerticalEnd,
+	Map,
+	PieChart,
+	Settings2,
+	SquareTerminal,
+} from "lucide-react"
+import * as React from "react"
+
+import {
 	Sidebar,
 	SidebarContent,
 	SidebarFooter,
 	SidebarHeader,
-	SidebarMenu,
-	SidebarMenuButton,
-	SidebarMenuItem,
+	SidebarRail,
 } from "@/shared"
-
-import {
-	AudioLines,
-	ChartArea,
-	LayoutDashboard,
-	Phone,
-	UsersRound,
-} from "lucide-react"
-import { FC } from "react"
 import { Link } from "react-router-dom"
+import { NavProjects } from "./nav-projects"
+import { NavUser } from "./nav-users"
+import { SidebarMenuComponent } from "./SidebarMenu"
 
-export const AppSidebar: FC = () => {
+// This is sample data.
+const data = {
+	user: {
+		name: "shadcn",
+		email: "m@example.com",
+		avatar: "/avatars/shadcn.jpg",
+	},
+	teams: [
+		{
+			name: "Acme Inc",
+			logo: GalleryVerticalEnd,
+			plan: "Enterprise",
+		},
+		{
+			name: "Acme Corp.",
+			logo: AudioWaveform,
+			plan: "Startup",
+		},
+		{
+			name: "Evil Corp.",
+			logo: Command,
+			plan: "Free",
+		},
+	],
+	navMain: [
+		{
+			title: "Playground",
+			url: "#",
+			icon: SquareTerminal,
+			isActive: true,
+			items: [
+				{
+					title: "History",
+					url: "#",
+				},
+				{
+					title: "Starred",
+					url: "#",
+				},
+				{
+					title: "Settings",
+					url: "#",
+				},
+			],
+		},
+		{
+			title: "Models",
+			url: "#",
+			icon: Bot,
+			items: [
+				{
+					title: "Genesis",
+					url: "#",
+				},
+				{
+					title: "Explorer",
+					url: "#",
+				},
+				{
+					title: "Quantum",
+					url: "#",
+				},
+			],
+		},
+		{
+			title: "Documentation",
+			url: "#",
+			icon: BookOpen,
+			items: [
+				{
+					title: "Introduction",
+					url: "#",
+				},
+				{
+					title: "Get Started",
+					url: "#",
+				},
+				{
+					title: "Tutorials",
+					url: "#",
+				},
+				{
+					title: "Changelog",
+					url: "#",
+				},
+			],
+		},
+		{
+			title: "Settings",
+			url: "#",
+			icon: Settings2,
+			items: [
+				{
+					title: "General",
+					url: "#",
+				},
+				{
+					title: "Team",
+					url: "#",
+				},
+				{
+					title: "Billing",
+					url: "#",
+				},
+				{
+					title: "Limits",
+					url: "#",
+				},
+			],
+		},
+	],
+	projects: [
+		{
+			name: "Design Engineering",
+			url: "#",
+			icon: Frame,
+		},
+		{
+			name: "Sales & Marketing",
+			url: "#",
+			icon: PieChart,
+		},
+		{
+			name: "Travel",
+			url: "#",
+			icon: Map,
+		},
+	],
+}
+
+export const AppSidebar: React.FC = ({
+	...props
+}: React.ComponentProps<typeof Sidebar>) => {
 	return (
-		<Sidebar collapsible="icon" className="border w-full sticky top-0">
-			<SidebarHeader className="py-3 my-5">
-				<h4 className="flex items-center gap-2 text-xl font-bold">
-					<AudioLines />
-					Hub Spot
-				</h4>
-			</SidebarHeader>
-			<SidebarContent className="p-6 gap-8 w-full ">
-				<div className="flex items-center gap-3.5">
-					<ChangeTheme />
-					<div className="flex flex-col">
-						<span className="text-md">Салон красоты ESTEL:</span>
-						<small className="text-textcolor">John Doe</small>
+		<Sidebar collapsible="offcanvas" {...props}>
+			<SidebarHeader className="py-2.5 pl-4 gap-10">
+				<Link to={"/"}>
+					<div className="flex items-center gap-2">
+						<div className="flex justify-center items-center border w-10 h-10 rounded-sm">
+							<AudioLines />
+						</div>
+						<strong className="text-xl font-bold ">Hub Spot</strong>
 					</div>
-				</div>
-				<Separator className="opacity-50" />
-
-				<SidebarMenu className="flex flex-col gap-2">
-					<Link to="/">
-						<Item variant="muted">
-							<ItemMedia variant="icon">
-								<LayoutDashboard size={20} />
-							</ItemMedia>
-							<ItemContent>
-								<ItemTitle>Dashboard</ItemTitle>
-								<ItemDescription>
-									Dashboard, главная страница, основная информация
-								</ItemDescription>
-							</ItemContent>
-						</Item>
-					</Link>
-					<Link to="/users">
-						<Item variant="muted">
-							<ItemMedia variant="icon">
-								<UsersRound size={20} />
-							</ItemMedia>
-							<ItemContent>
-								<ItemTitle>Сотрудники</ItemTitle>
-								<ItemDescription>
-									Список сотрудников, подробная информация
-								</ItemDescription>
-							</ItemContent>
-						</Item>
-					</Link>
-					<Link to="#">
-						<Item variant="muted">
-							<ItemMedia variant="icon">
-								<ChartArea size={20} />
-							</ItemMedia>
-							<ItemContent>
-								<ItemTitle>Аналитика данных</ItemTitle>
-								<ItemDescription>
-									Подробная аналитика данных компании
-								</ItemDescription>
-							</ItemContent>
-						</Item>
-					</Link>
-					<Link to="#">
-						<Item variant="muted">
-							<ItemMedia variant="icon">
-								<Phone size={20} />
-							</ItemMedia>
-							<ItemContent>
-								<ItemTitle>Тех.поддержка</ItemTitle>
-								<ItemDescription>
-									Техническая поддержка клиентов 24/7
-								</ItemDescription>
-							</ItemContent>
-						</Item>
-					</Link>
-				</SidebarMenu>
+				</Link>
+				<h4 className="text-[14px]">ESTEL: Салон красоты</h4>
+			</SidebarHeader>
+			<SidebarContent>
+				<SidebarMenuComponent items={data.navMain} />
+				<NavProjects projects={data.projects} />
 			</SidebarContent>
 			<SidebarFooter>
-				<SidebarMenuItem>
-					<SidebarMenuButton asChild>
-						<a href="#">
-							<span className="text-xs font-light text-textcolor">
-								Разработано @ZionLabs 2026
-							</span>
-						</a>
-					</SidebarMenuButton>
-				</SidebarMenuItem>
+				<NavUser user={data.user} />
 			</SidebarFooter>
+			<SidebarRail />
 		</Sidebar>
 	)
 }

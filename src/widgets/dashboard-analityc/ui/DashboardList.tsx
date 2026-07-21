@@ -2,7 +2,7 @@ import { ChevronsDown, ChevronsUp, MoveDown, MoveUp, Star } from "lucide-react"
 
 export const DashboardList = () => {
 	return (
-		<ul className="flex flex-col gap-2 flex-1 border border-dashed p-3">
+		<ul className="flex flex-col gap-2 flex-1 border border-dashed rounded-sm p-3">
 			<li className="flex justify-between items-center gap-2">
 				<span className="text-[14px] flex-1 border-b border-dashed border-gray-300 dark:border-gray-600 pb-0.5">
 					Администратор

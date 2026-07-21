@@ -156,7 +156,7 @@ export const StatChart: FC = () => {
 	})
 
 	return (
-		<Card className="w-full min-h-80">
+		<Card className="w-full min-h-80 rounded-md">
 			<CardHeader>
 				<CardTitle>Посещения салона</CardTitle>
 				<CardDescription>

@@ -153,3 +153,17 @@
 		@apply bg-background text-foreground;
 	}
 }
+main {
+	overflow: auto;
+
+	/* Firefox */
+	scrollbar-width: none;
+
+	/* IE и старый Edge */
+	-ms-overflow-style: none;
+}
+
+/* Chrome, Safari, Opera, новый Edge */
+main::-webkit-scrollbar {
+	display: none;
+}
