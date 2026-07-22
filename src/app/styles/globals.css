@@ -167,3 +167,6 @@ main {
 main::-webkit-scrollbar {
 	display: none;
 }
+section {
+	@apply my-2;
+}

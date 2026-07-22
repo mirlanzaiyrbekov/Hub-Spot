@@ -1,7 +1,8 @@
 import { StatChart } from "@/features"
 import {
 	DashbiardAnalityc,
-	PlanCard,
+	RecordCardStat,
+	RecordedCard,
 	RevenueCard,
 	VisitorsCard,
 } from "@/widgets"
@@ -17,9 +18,14 @@ export const Home: FC = () => {
 					{/* VISITORS */}
 					<VisitorsCard />
 					{/* PLANCARD */}
-					<PlanCard />
+					<RecordCardStat />
+					<RecordedCard />
 				</div>
+			</section>
+			<section>
 				<StatChart />
+			</section>
+			<section>
 				{/* DASHBOARD STATS */}
 				<DashbiardAnalityc />
 			</section>

@@ -31,7 +31,7 @@ export const RevenueCard: FC = () => {
 					<TrendingUp className="size-4 text-green-500" />
 				</div>
 				<div className="text-muted-foreground">
-					Посетители за последние 6 месяцев
+					Наблюдается рост выручки за последние 6 месяцев
 				</div>
 			</CardFooter>
 		</Card>
