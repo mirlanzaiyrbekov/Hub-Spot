@@ -52,14 +52,17 @@ const data = {
 				{
 					title: "Zion Labs Ai",
 					url: "#",
+					disabled: true,
 				},
 				{
 					title: "Полный пакет поддержки",
 					url: "#",
+					disabled: true,
 				},
 				{
 					title: "Quantum",
 					url: "#",
+					disabled: true,
 				},
 			],
 		},
@@ -96,6 +99,7 @@ const data = {
 				{
 					title: "Telegram",
 					url: "#",
+					disabled: true,
 				},
 			],
 		},

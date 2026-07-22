@@ -27,6 +27,7 @@ export const SidebarMenuComponent: FC<{
 		items?: {
 			title: string
 			url: string
+			disabled?: boolean
 		}[]
 	}[]
 }> = ({ items }) => {
@@ -53,11 +54,19 @@ export const SidebarMenuComponent: FC<{
 								<SidebarMenuSub>
 									{item.items?.map((subItem) => (
 										<SidebarMenuSubItem key={subItem.title}>
-											<SidebarMenuSubButton asChild>
-												<Link to={subItem.url}>
-													<span>{subItem.title}</span>
-												</Link>
-											</SidebarMenuSubButton>
+											{subItem.disabled ? (
+												<SidebarMenuSubButton>
+													<span className="cursor-not-allowed opacity-30">
+														{subItem.title}
+													</span>
+												</SidebarMenuSubButton>
+											) : (
+												<SidebarMenuSubButton asChild>
+													<Link to={subItem.url}>
+														<span>{subItem.title}</span>
+													</Link>
+												</SidebarMenuSubButton>
+											)}
 										</SidebarMenuSubItem>
 									))}
 								</SidebarMenuSub>
