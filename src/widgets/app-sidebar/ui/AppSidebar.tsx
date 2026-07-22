@@ -2,16 +2,10 @@
 
 import {
 	AudioLines,
-	AudioWaveform,
+	Blocks,
 	BookOpen,
-	Bot,
-	Command,
-	Frame,
-	GalleryVerticalEnd,
-	Map,
-	PieChart,
-	Settings2,
-	SquareTerminal,
+	LifeBuoy,
+	MonitorCog,
 } from "lucide-react"
 import * as React from "react"
 
@@ -23,66 +17,44 @@ import {
 	SidebarRail,
 } from "@/shared"
 import { Link } from "react-router-dom"
-import { NavProjects } from "./nav-projects"
-import { NavUser } from "./nav-users"
 import { SidebarMenuComponent } from "./SidebarMenu"
+import { SidebarUser } from "./SidebarUser"
 
 // This is sample data.
 const data = {
-	user: {
-		name: "shadcn",
-		email: "m@example.com",
-		avatar: "/avatars/shadcn.jpg",
-	},
-	teams: [
-		{
-			name: "Acme Inc",
-			logo: GalleryVerticalEnd,
-			plan: "Enterprise",
-		},
-		{
-			name: "Acme Corp.",
-			logo: AudioWaveform,
-			plan: "Startup",
-		},
-		{
-			name: "Evil Corp.",
-			logo: Command,
-			plan: "Free",
-		},
-	],
 	navMain: [
 		{
-			title: "Playground",
+			title: "Навигация",
 			url: "#",
-			icon: SquareTerminal,
+			icon: MonitorCog,
 			isActive: true,
 			items: [
 				{
-					title: "History",
-					url: "#",
+					title: "Главная",
+					url: "/",
 				},
 				{
-					title: "Starred",
-					url: "#",
+					title: "Сотрудники",
+					url: "/users",
 				},
 				{
-					title: "Settings",
+					title: "Аналитика",
 					url: "#",
 				},
 			],
 		},
 		{
-			title: "Models",
+			title: "Расширения",
 			url: "#",
-			icon: Bot,
+			icon: Blocks,
+			isActive: true,
 			items: [
 				{
-					title: "Genesis",
+					title: "Zion Labs Ai",
 					url: "#",
 				},
 				{
-					title: "Explorer",
+					title: "Полный пакет поддержки",
 					url: "#",
 				},
 				{
@@ -92,67 +64,40 @@ const data = {
 			],
 		},
 		{
-			title: "Documentation",
+			title: "Документация",
 			url: "#",
 			icon: BookOpen,
+			isActive: true,
 			items: [
 				{
-					title: "Introduction",
+					title: "Частые вопросы",
 					url: "#",
 				},
 				{
-					title: "Get Started",
+					title: "Первый старт",
 					url: "#",
 				},
 				{
-					title: "Tutorials",
-					url: "#",
-				},
-				{
-					title: "Changelog",
+					title: "Учебные материалы",
 					url: "#",
 				},
 			],
 		},
 		{
-			title: "Settings",
+			title: "Тех.поддержка",
 			url: "#",
-			icon: Settings2,
+			icon: LifeBuoy,
+			isActive: true,
 			items: [
 				{
-					title: "General",
+					title: "WhatsUp",
 					url: "#",
 				},
 				{
-					title: "Team",
-					url: "#",
-				},
-				{
-					title: "Billing",
-					url: "#",
-				},
-				{
-					title: "Limits",
+					title: "Telegram",
 					url: "#",
 				},
 			],
-		},
-	],
-	projects: [
-		{
-			name: "Design Engineering",
-			url: "#",
-			icon: Frame,
-		},
-		{
-			name: "Sales & Marketing",
-			url: "#",
-			icon: PieChart,
-		},
-		{
-			name: "Travel",
-			url: "#",
-			icon: Map,
 		},
 	],
 }
@@ -161,24 +106,46 @@ export const AppSidebar: React.FC = ({
 	...props
 }: React.ComponentProps<typeof Sidebar>) => {
 	return (
-		<Sidebar collapsible="offcanvas" {...props}>
+		<Sidebar collapsible="offcanvas" {...props} className="border-none">
 			<SidebarHeader className="py-2.5 pl-4 gap-10">
 				<Link to={"/"}>
 					<div className="flex items-center gap-2">
-						<div className="flex justify-center items-center border w-10 h-10 rounded-sm">
+						<div className="flex justify-center items-center border border-zinc-400/40 dark:border-zinc-600 w-10 h-10 rounded-md bg-zinc-100/50 dark:bg-zinc-900">
 							<AudioLines />
 						</div>
-						<strong className="text-xl font-bold ">Hub Spot</strong>
+						<strong
+							className="
+								text-xl font-extrabold
+								bg-clip-text text-transparent
+								bg-linear-to-r
+								from-zinc-700
+								via-zinc-500
+								to-zinc-700
+
+								dark:from-zinc-400
+								dark:via-white
+								dark:to-zinc-400
+
+								drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)]
+								dark:drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]
+							"
+						>
+							Hub Spot
+						</strong>
 					</div>
 				</Link>
-				<h4 className="text-[14px]">ESTEL: Салон красоты</h4>
 			</SidebarHeader>
-			<SidebarContent>
+			<SidebarContent className="pt-5">
 				<SidebarMenuComponent items={data.navMain} />
-				<NavProjects projects={data.projects} />
 			</SidebarContent>
 			<SidebarFooter>
-				<NavUser user={data.user} />
+				<SidebarUser
+					user={{
+						name: "shadcn",
+						email: "m@example.com",
+						avatar: "/avatars/shadcn.jpg",
+					}}
+				/>
 			</SidebarFooter>
 			<SidebarRail />
 		</Sidebar>

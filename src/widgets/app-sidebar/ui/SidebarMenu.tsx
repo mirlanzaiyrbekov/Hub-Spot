@@ -16,6 +16,7 @@ import {
 	SidebarMenuSubItem,
 } from "@/shared"
 import { FC } from "react"
+import { Link } from "react-router-dom"
 
 export const SidebarMenuComponent: FC<{
 	items: {
@@ -31,7 +32,7 @@ export const SidebarMenuComponent: FC<{
 }> = ({ items }) => {
 	return (
 		<SidebarGroup>
-			<SidebarGroupLabel>Platform</SidebarGroupLabel>
+			<SidebarGroupLabel>Платформа</SidebarGroupLabel>
 			<SidebarMenu>
 				{items.map((item) => (
 					<Collapsible
@@ -53,9 +54,9 @@ export const SidebarMenuComponent: FC<{
 									{item.items?.map((subItem) => (
 										<SidebarMenuSubItem key={subItem.title}>
 											<SidebarMenuSubButton asChild>
-												<a href={subItem.url}>
+												<Link to={subItem.url}>
 													<span>{subItem.title}</span>
-												</a>
+												</Link>
 											</SidebarMenuSubButton>
 										</SidebarMenuSubItem>
 									))}

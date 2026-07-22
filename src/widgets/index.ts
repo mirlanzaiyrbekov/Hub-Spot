@@ -1,5 +1,6 @@
+export * from "./app-bar/ui/app-bar"
 export * from "./app-sidebar/ui/AppSidebar"
-export * from "./app-sidebar/ui/AppSidebarMenu"
+export * from "./app-sidebar/ui/SidebarUser"
 export * from "./breadcrumb/ui/breadcrumb"
 export * from "./dashboard-analityc/ui/DashboardAnalityc"
 export * from "./dashboard-cards/ui/plan-card"
