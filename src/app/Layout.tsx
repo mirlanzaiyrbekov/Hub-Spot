@@ -10,8 +10,8 @@ export const Layout: FC = () => {
 			<SidebarProvider>
 				<TooltipProvider>
 					<AppSidebar />
-					<SidebarInset className="min-h-screen bg-sidebar p-2">
-						<main className="rounded-lg shadow-sm border bg-background">
+					<SidebarInset className="bg-sidebar p-2">
+						<main className="rounded-lg shadow-sm border bg-background min-h-screen h-full">
 							<AppBar />
 							<div className="p-3">
 								<Outlet />
