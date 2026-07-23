@@ -1,6 +1,7 @@
 import { ChevronsDown, ChevronsUp, MoveDown, MoveUp, Star } from "lucide-react"
+import { FC } from "react"
 
-export const DashboardList = () => {
+export const BusinessOverviewList: FC = () => {
 	return (
 		<ul className="flex flex-col gap-2 flex-1 border border-dashed rounded-sm p-3">
 			<li className="flex justify-between items-center gap-2">

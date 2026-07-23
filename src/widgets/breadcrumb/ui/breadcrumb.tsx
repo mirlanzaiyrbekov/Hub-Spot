@@ -13,11 +13,11 @@ export const BreadcrumbComponent: FC = () => {
 		<Breadcrumb>
 			<BreadcrumbList>
 				<BreadcrumbItem>
-					<BreadcrumbLink children={<a href="#">Home</a>} />
+					<BreadcrumbLink href="#">Home</BreadcrumbLink>
 				</BreadcrumbItem>
 				<BreadcrumbSeparator />
 				<BreadcrumbItem>
-					<BreadcrumbLink children={<a href="#">Components</a>} />
+					<BreadcrumbLink href="#">Components</BreadcrumbLink>
 				</BreadcrumbItem>
 				<BreadcrumbSeparator />
 				<BreadcrumbItem>

@@ -6,11 +6,11 @@ import {
 	CardFooter,
 	CardHeader,
 } from "@/shared"
-import { DashboardList } from "@/widgets/dashboard-analityc/ui/DashboardList"
 import { DatabaseBackup } from "lucide-react"
 import { FC } from "react"
+import { BusinessOverviewList } from "./business-overview-list"
 
-export const DashbiardAnalityc: FC = () => {
+export const BusinessOverview: FC = () => {
 	return (
 		<Card className="@container/card shadow-xs rounded-md">
 			<CardHeader />
@@ -29,7 +29,7 @@ export const DashbiardAnalityc: FC = () => {
 							</Button>
 						</div>
 
-						<DashboardList />
+						<BusinessOverviewList />
 					</div>
 				</div>
 			</CardContent>

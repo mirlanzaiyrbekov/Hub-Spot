@@ -1,0 +1,13 @@
+import { Customers, Entries, InsightsCard, Revenues } from "@/widgets/cards"
+import { FC } from "react"
+
+export const Revenue: FC = () => {
+	return (
+		<div className="grid grid-cols-4 gap-2">
+			<Revenues />
+			<Customers />
+			<Entries />
+			<InsightsCard />
+		</div>
+	)
+}

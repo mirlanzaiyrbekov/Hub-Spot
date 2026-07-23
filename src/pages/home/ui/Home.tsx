@@ -1,33 +1,23 @@
-import { StatChart } from "@/features"
-import {
-	DashbiardAnalityc,
-	RecordCardStat,
-	RecordedCard,
-	RevenueCard,
-	VisitorsCard,
-} from "@/widgets"
+import { BusinessOverview, Revenue } from "@/widgets"
 import { FC } from "react"
 
 export const Home: FC = () => {
 	return (
 		<>
 			<section className="grid grid-cols-1 gap-y-2">
-				<div className="grid grid-cols-4 gap-2">
-					{/* REVENUES */}
+				<Revenue />
+				{/* <div className="grid grid-cols-4 gap-2">
 					<RevenueCard />
-					{/* VISITORS */}
 					<VisitorsCard />
-					{/* PLANCARD */}
 					<RecordCardStat />
 					<RecordedCard />
-				</div>
+				</div> */}
 			</section>
-			<section>
+			{/* <section>
 				<StatChart />
-			</section>
+			</section> */}
 			<section>
-				{/* DASHBOARD STATS */}
-				<DashbiardAnalityc />
+				<BusinessOverview />
 			</section>
 		</>
 	)

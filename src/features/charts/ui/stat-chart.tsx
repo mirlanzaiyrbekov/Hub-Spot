@@ -26,7 +26,7 @@ import { useIsMobile } from "@/shared/hooks/use-mobile"
 import { FC } from "react"
 export const description = "An interactive area chart"
 
-const chartData = [
+export const chartData = [
 	{ date: "2024-04-01", visitors: 222, revenue: 150 },
 	{ date: "2024-04-02", visitors: 97, revenue: 180 },
 	{ date: "2024-04-03", visitors: 167, revenue: 120 },
@@ -120,7 +120,7 @@ const chartData = [
 	{ date: "2024-06-30", visitors: 446, revenue: 400 },
 ]
 
-const chartConfig = {
+export const chartConfig = {
 	revenue: {
 		label: "Прибыль",
 		color: "#5c1987",

@@ -1,9 +1,8 @@
+export * from "./analitycs"
 export * from "./app-bar/ui/app-bar"
 export * from "./app-sidebar/ui/AppSidebar"
 export * from "./app-sidebar/ui/SidebarUser"
 export * from "./breadcrumb/ui/breadcrumb"
-export * from "./dashboard-analityc/ui/DashboardAnalityc"
-export * from "./dashboard-cards/ui/record-card-stat"
-export * from "./dashboard-cards/ui/recorded-card"
-export * from "./dashboard-cards/ui/revenue-card"
-export * from "./dashboard-cards/ui/visitors-card"
+export * from "./cards"
+export * from "./revenue"
+
