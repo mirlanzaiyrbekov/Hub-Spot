@@ -34,24 +34,26 @@ export const Entries: FC = () => {
 				</CardAction>
 			</CardHeader>
 			<CardFooter className="flex-col items-start gap-1 text-sm">
-				<div className="text-muted-foreground flex items-center gap-1.5">
+				<div className="flex items-center gap-1.5">
 					<ChevronRightIcon className="mt-0.5 size-2 shrink-0" />
-					Сегодня:
+					<span className="text-muted-foreground">Сегодня:</span>
 					<b className="flex items-center gap-0.5">
 						<Plus className="size-3 text-green-600" />6
 					</b>
 				</div>
-				<div className="text-muted-foreground flex items-center gap-1.5">
+				<div className="flex items-center gap-1.5">
 					<ChevronRightIcon className="mt-0.5 size-2 shrink-0" />
-					Записей на завтра:
+					<span className="text-muted-foreground">Записей на завтра:</span>
 					<b className="flex items-center gap-0.5">
 						<Check className="size-3 text-green-600" />
 						14
 					</b>
 				</div>
-				<div className="text-muted-foreground flex items-center gap-1.5">
+				<div className="flex items-center gap-1.5">
 					<ChevronRightIcon className="mt-0.5 size-2 shrink-0" />
-					Всего записей за прошлый месяц:
+					<span className="text-muted-foreground">
+						Всего записей за прошлый месяц:
+					</span>
 					<b className="flex items-center gap-0.5">
 						<TrendingUp className="size-3 text-green-600" />
 						78
