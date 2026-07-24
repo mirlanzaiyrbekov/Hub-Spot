@@ -11,17 +11,18 @@ import * as React from "react"
 
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader } from "@/shared"
 import { Link } from "react-router-dom"
+import { SidebarMenuType } from "../types/sidebar-menu-component"
 import { SidebarMenuComponent } from "./sidebar-menu"
 
 // This is sample data.
-const data = {
-	navMain: [
+const data: SidebarMenuType = {
+	items: [
 		{
 			title: "Навигация",
 			url: "#",
 			icon: MonitorCog,
 			isActive: true,
-			items: [
+			subItems: [
 				{
 					title: "Главная",
 					url: "/",
@@ -41,7 +42,7 @@ const data = {
 			url: "#",
 			icon: Blocks,
 			isActive: true,
-			items: [
+			subItems: [
 				{
 					title: "Zion Labs Ai",
 					url: "#",
@@ -64,7 +65,7 @@ const data = {
 			url: "#",
 			icon: BookOpen,
 			isActive: true,
-			items: [
+			subItems: [
 				{
 					title: "Частые вопросы",
 					url: "#",
@@ -84,7 +85,7 @@ const data = {
 			url: "#",
 			icon: LifeBuoy,
 			isActive: true,
-			items: [
+			subItems: [
 				{
 					title: "WhatsUp",
 					url: "#",
@@ -133,7 +134,7 @@ export const AppSidebar: React.FC = ({
 				</Link>
 			</SidebarHeader>
 			<SidebarContent className="pt-5">
-				<SidebarMenuComponent items={data.navMain} />
+				<SidebarMenuComponent items={data.items} />
 			</SidebarContent>
 			<SidebarFooter>
 				<div className="p-3">

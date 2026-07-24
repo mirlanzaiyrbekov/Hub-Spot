@@ -1,6 +1,6 @@
 "use client"
 
-import { ChevronRight, type LucideIcon } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 
 import {
 	Collapsible,
@@ -17,20 +17,11 @@ import {
 } from "@/shared"
 import { FC } from "react"
 import { Link } from "react-router-dom"
+import { SidebarMenuType } from "../types/sidebar-menu-component"
 
-export const SidebarMenuComponent: FC<{
-	items: {
-		title: string
-		url: string
-		icon?: LucideIcon
-		isActive?: boolean
-		items?: {
-			title: string
-			url: string
-			disabled?: boolean
-		}[]
-	}[]
-}> = ({ items }) => {
+export const SidebarMenuComponent: FC<Pick<SidebarMenuType, "items">> = ({
+	items,
+}) => {
 	return (
 		<SidebarGroup>
 			<SidebarGroupLabel>Платформа</SidebarGroupLabel>
@@ -52,7 +43,7 @@ export const SidebarMenuComponent: FC<{
 							</CollapsibleTrigger>
 							<CollapsibleContent>
 								<SidebarMenuSub>
-									{item.items?.map((subItem) => (
+									{item.subItems?.map((subItem) => (
 										<SidebarMenuSubItem key={subItem.title}>
 											{subItem.disabled ? (
 												<SidebarMenuSubButton>
