@@ -7,10 +7,9 @@ import {
 	CardHeader,
 } from "@/shared"
 import { DatabaseBackup } from "lucide-react"
-import { FC } from "react"
-import { BusinessOverviewList } from "./business-overview-list"
+import { OverviewList } from "./overview-list"
 
-export const BusinessOverview: FC = () => {
+export const BusinessOverview = () => {
 	return (
 		<Card className="@container/card shadow-xs rounded-md col-span-3">
 			<CardHeader />
@@ -29,7 +28,7 @@ export const BusinessOverview: FC = () => {
 							</Button>
 						</div>
 
-						<BusinessOverviewList />
+						<OverviewList />
 					</div>
 				</div>
 			</CardContent>

@@ -28,7 +28,7 @@ export const Entries: FC = () => {
 					</div>
 				</CardTitle>
 				<CardAction>
-					<Badge variant="outline" className="text-red-700">
+					<Badge variant="outline" className="text-purple-700">
 						2 отмены
 					</Badge>
 				</CardAction>
