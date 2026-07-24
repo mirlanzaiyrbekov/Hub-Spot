@@ -1,4 +1,4 @@
-import { BusinessOverview, Revenue } from "@/widgets"
+import { Revenue } from "@/widgets"
 import { FC } from "react"
 
 export const Home: FC = () => {
@@ -16,9 +16,7 @@ export const Home: FC = () => {
 			{/* <section>
 				<StatChart />
 			</section> */}
-			<section>
-				<BusinessOverview />
-			</section>
+			<section>{/* <BusinessOverview /> */}</section>
 		</>
 	)
 }
