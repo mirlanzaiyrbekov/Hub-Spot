@@ -3,7 +3,7 @@ import { FC } from "react"
 
 export const Revenue: FC = () => {
 	return (
-		<div className="grid grid-cols-4 gap-2">
+		<div className="grid grid-cols-4 gap-1.5">
 			<Revenues />
 			<Customers />
 			<Entries />
