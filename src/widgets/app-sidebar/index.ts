@@ -1,1 +1,1 @@
-export * from "./ui/AppSidebar"
+export * from "./ui/app-sidebar"

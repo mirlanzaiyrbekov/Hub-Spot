@@ -1,5 +1,4 @@
-import { Home, NotFound } from "@/pages"
-import { UsersPage } from "@/pages/users/ui/Users"
+import { EmployeesPage, Home, NotFound } from "@/pages"
 import { createBrowserRouter } from "react-router-dom"
 import { Layout } from "./Layout"
 
@@ -13,8 +12,8 @@ export const routes = createBrowserRouter([
 				element: <Home />,
 			},
 			{
-				path: "/users",
-				element: <UsersPage />,
+				path: "/employees",
+				element: <EmployeesPage />,
 				errorElement: <NotFound />,
 			},
 		],

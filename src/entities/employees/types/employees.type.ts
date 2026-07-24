@@ -1,4 +1,4 @@
-export interface IUser {
+export interface IEmployee {
 	id: number
 	firstName: string
 	lastName: string
@@ -86,5 +86,5 @@ export interface Crypto {
 }
 
 export type UserResponse = {
-	users: IUser[]
+	users: IEmployee[]
 }

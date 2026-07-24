@@ -1,2 +1,3 @@
-export * from "./home/ui/Home"
-export * from "./not-found/ui/NotFound"
+export * from "./employees"
+export * from "./home"
+export * from "./not-found"

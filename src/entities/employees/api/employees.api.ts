@@ -1,5 +1,5 @@
 import { api } from "@/shared/api/api"
-import { UserResponse } from "../types/user.type"
+import { UserResponse } from "../types/employees.type"
 
 const API_ENDPOINTS = {
 	USERS: "users",

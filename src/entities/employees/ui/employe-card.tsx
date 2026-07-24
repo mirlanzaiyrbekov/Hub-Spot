@@ -10,12 +10,12 @@ import {
 } from "@/shared"
 import { UserIcon } from "lucide-react"
 import { FC } from "react"
-import { IUser } from "../types/user.type"
+import { IEmployee } from "../types/employees.type"
 
 interface IUsersCardProps {
-	user: IUser
+	user: IEmployee
 }
-export const UserCard: FC<IUsersCardProps> = ({ user }) => {
+export const EmployeCard: FC<IUsersCardProps> = ({ user }) => {
 	return (
 		<Card key={user.id} className="relative overflow-hidden">
 			<img

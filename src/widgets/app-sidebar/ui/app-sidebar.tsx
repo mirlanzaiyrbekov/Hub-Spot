@@ -9,16 +9,9 @@ import {
 } from "lucide-react"
 import * as React from "react"
 
-import {
-	Sidebar,
-	SidebarContent,
-	SidebarFooter,
-	SidebarHeader,
-	SidebarRail,
-} from "@/shared"
+import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader } from "@/shared"
 import { Link } from "react-router-dom"
-import { SidebarMenuComponent } from "./SidebarMenu"
-import { SidebarUser } from "./SidebarUser"
+import { SidebarMenuComponent } from "./sidebar-menu"
 
 // This is sample data.
 const data = {
@@ -143,15 +136,28 @@ export const AppSidebar: React.FC = ({
 				<SidebarMenuComponent items={data.navMain} />
 			</SidebarContent>
 			<SidebarFooter>
-				<SidebarUser
-					user={{
-						name: "shadcn",
-						email: "m@example.com",
-						avatar: "/avatars/shadcn.jpg",
-					}}
-				/>
+				<div className="p-3">
+					<span
+						className="
+								text-[10px] font-extrabold
+								bg-clip-text text-transparent
+								bg-linear-to-r
+								from-zinc-400
+								via-zinc-500
+								to-zinc-400
+
+								dark:from-zinc-400
+								dark:via-white
+								dark:to-zinc-400
+
+								drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)]
+								dark:drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]
+							"
+					>
+						Prefect Founder of &copy; Zion Labs Corp.2026
+					</span>
+				</div>
 			</SidebarFooter>
-			<SidebarRail />
 		</Sidebar>
 	)
 }

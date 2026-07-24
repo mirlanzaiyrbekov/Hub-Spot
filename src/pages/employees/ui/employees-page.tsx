@@ -1,7 +1,7 @@
-import { UsersList } from "@/entities"
+import { EmployeesList } from "@/entities"
 import { FC } from "react"
 
-export const UsersPage: FC = () => {
+export const EmployeesPage: FC = () => {
 	return (
 		<>
 			<section className="px-1.5 py-2.5">
@@ -9,7 +9,7 @@ export const UsersPage: FC = () => {
 					<span className="text-sm">Общее число сотрудников -</span>
 					<strong className="text-base text-textcolor">20</strong>
 				</div>
-				<UsersList />
+				<EmployeesList />
 			</section>
 		</>
 	)
