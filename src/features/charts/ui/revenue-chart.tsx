@@ -131,7 +131,7 @@ export const chartConfig = {
 	},
 } satisfies ChartConfig
 
-export const StatChart: FC = () => {
+export const RevenueChart: FC = () => {
 	const isMobile = useIsMobile()
 	const [timeRange, setTimeRange] = React.useState("90d")
 
@@ -158,12 +158,12 @@ export const StatChart: FC = () => {
 	return (
 		<Card className="w-full min-h-80 rounded-md">
 			<CardHeader>
-				<CardTitle>Посещения салона</CardTitle>
+				<CardTitle>Доход на графике</CardTitle>
 				<CardDescription>
 					<span className="hidden @[540px]/card:block">
 						Общее за последние 3 месяца
 					</span>
-					<span className="@[540px]/card:hidden">Последние 3 месяца</span>
+					<span className="@[540px]/card:hidden">{timeRange}</span>
 				</CardDescription>
 				<CardAction>
 					<ToggleGroup

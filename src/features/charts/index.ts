@@ -1,1 +1,1 @@
-export * from "./ui/stat-chart"
+export * from "./ui/revenue-chart"

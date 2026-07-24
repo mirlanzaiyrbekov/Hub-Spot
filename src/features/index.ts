@@ -1,2 +1,2 @@
 export * from "./change-theme/ui/change-theme"
-export * from "./charts/ui/stat-chart"
+export * from "./charts/ui/revenue-chart"
